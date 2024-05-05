@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   # Rails App
   app:
@@ -17,6 +19,18 @@ services:
       - db
       - redis
       - sidekiq
+    networks:
+      - app-network
+
+  # Nginx
+  nginx:
+    image: nginx:latest
+    ports:
+      - "81:80"
+    volumes:
+      - ./dockerconfig/nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - app
     networks:
       - app-network
 
