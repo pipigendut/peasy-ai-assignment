@@ -44,7 +44,7 @@ services:
 
   # Sidekiq
   sidekiq:
-    build: .
+    image: asia.gcr.io/pipigendut/peasy-ai-assignment:latest
     command: bundle exec sidekiq
     depends_on:
       - db
