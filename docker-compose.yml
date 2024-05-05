@@ -1,18 +1,24 @@
-version: '3.8'
-
 services:
   # Rails App
-  web:
-    build: .
+  app:
+    image: asia.gcr.io/pipigendut/peasy-ai-assignment:latest
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    tty: true
+    environment:
+        - RAILS_SERVE_STATIC_FILES=true
+        - TZ='Asia/Jakarta'
+        - RAILS_LOG_TO_STDOUT='RAILS_LOG_TO_STDOUT'
+    depends_on:
+        - redis
     ports:
-      - "80:3000"
+        - 8088:8080
+        - 3000:3000
     volumes:
       - .:/app
     depends_on:
       - db
       - redis
-      - sidekiq  # Tambahkan sidekiq sebagai dependensi
+      - sidekiq
     networks:
       - app-network
 
