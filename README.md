@@ -1,24 +1,24 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Peasy AI Asssignment
 
-Things you may want to cover:
+This document provides instructions and guidelines for completing the assignment using Ruby on Rails, Sidekiq, PostgreSQL, Redis, and Linux. The assignment involves creating Sidekiq jobs to interact with APIs, store data in a PostgreSQL database, and perform various calculations and updates based on the data.
 
-* Ruby version
+## Usage
+### Development
+For development purposes, you can run the Rails application locally without Docker.
 
-* System dependencies
+```
+rails db:create
+rails db:migrate
+rails server
+```
 
-* Configuration
+### Production
+For production deployment, use Docker Compose to build and run the containers.
 
-* Database creation
+```
+docker-compose up -d
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Conclusion
+Follow the provided instructions to set up and deploy your Ruby on Rails application using Docker Compose. Customize configurations and environment variables as needed to suit your application requirements. If you encounter any issues or need further assistance, refer to Docker and Rails documentation or seek help from the community. Happy coding!

@@ -7,7 +7,7 @@ development:
   pool: 5
   username: postgres
   password: postgrespassword
-  host: localhost
+  host: 172.17.0.1
   port: 5432
   database: peasy-ai-db
 
@@ -16,7 +16,7 @@ test:
   pool: 5
   username: postgres
   password: postgrespassword
-  host: localhost
+  host: 172.17.0.1
   port: 5432
   database: peasy-ai-db
 
@@ -25,6 +25,6 @@ production:
   pool: 5
   username: postgres
   password: postgrespassword
-  host: localhost
+  host: 172.17.0.1
   port: 5432
   database: peasy-ai-db-prod
