@@ -1,0 +1,9 @@
+daily_record_capture_job:
+  cron: "59 23 * * *"
+  class: "DailyRecordCaptureJob"
+  queue: default
+
+user_capture_job:
+  cron: "0 * * * *"
+  class: "UserCaptureJob"
+  queue: default

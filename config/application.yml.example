@@ -1,0 +1,3 @@
+REDIS_SHARED_HOST: 'localhost'
+REDIS_SHARED_PORT: '6379'
+REDIS_SIDEKIQ_URL: 'redis://localhost:6379'

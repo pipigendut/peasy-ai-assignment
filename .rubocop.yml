@@ -1,0 +1,33 @@
+Style/Encoding:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/RescueModifier:
+  Enabled: false
+Style/RedundantBegin:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/IfUnlessModifier:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+Metrics/ClassLength:
+  Enabled: false
+
+Layout/LineLength:
+  Enabled: false
+Layout/IndentationWidth:
+  Description: 'Use 2 spaces for indentation.'
+  StyleGuide: '#spaces-indentation'
+  Enabled: true
+  VersionAdded: '0.49'
+  # Number of spaces for each indentation level.
+  Width: 2
+  AllowedPatterns: []
+
+AllCops:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'

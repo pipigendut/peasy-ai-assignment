@@ -1,0 +1,9 @@
+<div class='container flex-direction-column m-30'>
+  <h1>Daily Records</h1>
+
+  <%= @daily_records_table_liquid_template.html_safe %>
+
+  <div class="pagination">
+    <%= paginate @daily_records %>
+  </div>
+</div>

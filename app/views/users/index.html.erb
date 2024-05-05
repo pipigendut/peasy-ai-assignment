@@ -1,0 +1,16 @@
+<div class='container flex-direction-column m-30'>
+  <h1>Users</h1>
+
+  <%= form_with(url: users_path, method: "get") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search users..." %>
+    <%= submit_tag "Search" %>
+  <% end %>
+
+  <%= @users_table_liquid_template.html_safe %>
+
+  Total Users: <%= @users.total_count %>
+
+  <div class="pagination">
+    <%= paginate @users %>
+  </div>
+</div>

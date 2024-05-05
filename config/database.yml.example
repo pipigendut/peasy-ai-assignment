@@ -1,0 +1,30 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  <<: *default
+  pool: 5
+  username: postgres
+  password: postgrespassword
+  host: localhost
+  port: 5432
+  database: peasy-ai-db
+
+test:
+  <<: *default
+  pool: 5
+  username: postgres
+  password: postgrespassword
+  host: localhost
+  port: 5432
+  database: peasy-ai-db
+
+production:
+  <<: *default
+  pool: 5
+  username: postgres
+  password: postgrespassword
+  host: localhost
+  port: 5432
+  database: peasy-ai-db-prod

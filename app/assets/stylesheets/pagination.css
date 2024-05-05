@@ -1,0 +1,31 @@
+/* Style the pagination container */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Style the pagination links */
+.pagination a {
+    color: #939292;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #939292;
+    margin: 0 4px;
+}
+
+.pagination a:hover {
+    background-color: #939292;
+    color: white;
+}
+
+/* Style the active pagination link */
+.pagination .active {
+    background-color: #939292;
+    color: white;
+}
+
+/* Style the disabled pagination link */
+.pagination .disabled {
+    color: #6c757d;
+    pointer-events: none;
+}

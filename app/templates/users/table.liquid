@@ -1,0 +1,31 @@
+<table>
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Created At</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+      {% assign row_number = start_number | plus: forloop.index %}
+      <tr>
+        <td>{{ row_number }}</td>
+        <td>{{ user.full_name }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.gender }}</td>
+        <td>{{ user.created_at }}</td>
+        <td>
+          <a href="#" onclick="event.preventDefault(); if (confirm('Are you sure?')) { document.getElementById('delete-form').submit(); }">Delete</a>
+          <form id="delete-form" action={{ user.link_to_delete_user }} method="post" style="display: none;">
+            <input type="hidden" name="_method" value="delete">
+            <input type="hidden" name="authenticity_token" value={{ form_authenticity_token }}>
+          </form>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
